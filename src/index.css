@@ -1,0 +1,118 @@
+/* ============================================================
+   DESIGN TOKENS — "Editor" theme
+   The whole site is styled like a code editor: tab bar for nav,
+   a line-number gutter running down content, comment-style
+   section eyebrows. Built by a developer, for developer clients.
+   ============================================================ */
+:root {
+  --bg: #14151f;
+  --surface: #1a1c29;
+  --surface-2: #212339;
+  --border: #2e3049;
+  --text: #e7e8f2;
+  --text-dim: #9799b8;
+  --gutter: #4a4d6b;
+
+  --accent-amber: #f5b942;   /* cursor / primary accent */
+  --accent-teal: #4fd1c5;    /* links, success, secondary accent */
+  --accent-purple: #a48af0;  /* keyword-like tags, headings */
+  --accent-rose: #f27878;    /* small warm highlight, used sparingly */
+
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius: 6px;
+  --content-w: 920px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(var(--surface-2) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -10px -10px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-mono);
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--font-sans); cursor: pointer; }
+
+::selection { background: var(--accent-amber); color: #14151f; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- shared layout helpers ---------- */
+.container {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 110px 0 70px;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+/* the gutter: faint line numbers beside content, like an editor margin */
+.gutter-block {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0 20px;
+}
+
+.gutter-block .lines {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gutter);
+  text-align: right;
+  user-select: none;
+  line-height: 1.9;
+  padding-top: 4px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-teal);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.eyebrow::before { content: "// "; color: var(--gutter); }
+
+.section-title {
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 600;
+  margin-bottom: 34px;
+}
+
+.section-title .accent { color: var(--accent-amber); }
