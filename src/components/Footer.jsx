@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <span>© {year} Your Name. Built with React &amp; Vite.</span>
+        <span>© {year} Yeshini Wickramasinghe. Built with React &amp; Vite.</span>
         <span className="footer-tag">{"</> with care"}</span>
       </div>
     </footer>
