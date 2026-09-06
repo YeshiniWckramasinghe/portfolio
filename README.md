@@ -1,35 +1,73 @@
-# Portfolio Website
+# Yeshini Wickramasinghe — Portfolio Website
 
-React + Vite වලින් හදපු single-page developer portfolio එකක්. Design theme එක code-editor එකක් style — tab bar navigation, syntax-highlighted hero, file-explorer style skills section.
+A single-page developer portfolio built with **React** and **Vite**, styled around a code-editor theme — a tab-bar navigation that mimics open editor tabs, a syntax-highlighted hero section, and a file-explorer-style skills layout.
 
-## Run locally
+**Live site:** [portfolio-lyart-nu-19.vercel.app](https://portfolio-lyart-nu-19.vercel.app)
+
+## Overview
+
+This portfolio showcases my background as an IT undergraduate and full-stack developer, including my technical skills, featured projects, freelance services, and contact details. The design intentionally borrows visual language from code editors (tabs, line numbers, terminal windows, file trees) to reflect the kind of work I do.
+
+## Sections
+
+- **Home** — Introduction and a quick snapshot of my tech stack
+- **About** — Background and areas of focus
+- **Skills** — Frontend, backend, languages, and tooling, organized like a file explorer
+- **Projects** — Featured work with tech stack tags and GitHub links
+- **Services** — Freelance services offered
+- **Contact** — Direct links (email, LinkedIn, GitHub) and a working contact form
+
+## Tech Stack
+
+- **React** — UI library
+- **Vite** — build tool and dev server
+- **Plain CSS** — custom design system (no framework)
+- **Formspree** — contact form submissions
+
+## Getting Started
 
 ```bash
+git clone https://github.com/YeshiniWckramasinghe/portfolio.git
+cd portfolio
 npm install
 npm run dev
 ```
 
-## Edit your details
+The site will be available at `http://localhost:5173`.
 
-- `src/components/Hero.jsx` — name, role, intro, tech stack object
-- `src/components/About.jsx` — about paragraph + tags
-- `src/components/Skills.jsx` — `FOLDERS` array
-- `src/components/Projects.jsx` — `PROJECTS` array (name, description, tech, links)
-- `src/components/Services.jsx` — `SERVICES` array
-- `src/components/Contact.jsx` — `LINKS` array (email / LinkedIn / GitHub)
-- `index.html` — page `<title>`
+To create a production build:
 
-## Contact form
+```bash
+npm run build
+```
 
-The form in `Contact.jsx` currently only shows a confirmation message locally — it doesn't send anywhere yet. To actually receive messages, connect it to a free service like:
+## Project Structure
 
-- [Formspree](https://formspree.io) — easiest, just point the form action at a Formspree endpoint
-- [EmailJS](https://www.emailjs.com) — sends straight from the browser via their JS SDK
+```
+src/
+├── components/
+│   ├── Nav.jsx        # Tab-bar navigation
+│   ├── Hero.jsx        # Landing section
+│   ├── About.jsx        # About section
+│   ├── Skills.jsx        # Skills / file-explorer section
+│   ├── Projects.jsx        # Project showcase
+│   ├── Services.jsx        # Freelance services
+│   ├── Contact.jsx        # Contact links + form
+│   └── Footer.jsx
+├── App.jsx
+└── index.css        # Design tokens and global styles
+```
 
-## Deploy
+## Contact Form
 
-Free options that work well with a Vite project:
+The contact form submits directly to [Formspree](https://formspree.io), so messages sent through the site are delivered straight to my inbox.
 
-- **Vercel** — `npm i -g vercel` then `vercel` in the project folder
-- **Netlify** — drag the `dist/` folder (after `npm run build`) into Netlify, or connect the GitHub repo
-- **GitHub Pages** — use the `gh-pages` package or GitHub Actions
+## Deployment
+
+This project is deployed on [Vercel](https://vercel.com), connected to the `main` branch of this repository. Every push to `main` triggers an automatic redeploy.
+
+## Contact
+
+- Email: yeshiniarchana@gmail.com
+- LinkedIn: [linkedin.com/in/yeshini](http://linkedin.com/in/yeshini)
+- GitHub: [github.com/YeshiniWckramasinghe](https://github.com/YeshiniWckramasinghe)
