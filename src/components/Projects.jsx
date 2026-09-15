@@ -2,6 +2,14 @@ import "./Projects.css";
 
 const PROJECTS = [
   {
+    hash: "c91a4f",
+    name: "StudyFlow — Student Study Planner",
+    desc: "A full-stack app for managing academic subjects, assignments, and deadlines, with a real-time progress dashboard, a RESTful API on MongoDB, priority-based task management, and dark/light theming.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/YeshiniWckramasinghe/studyflow",
+    demo: "#",
+  },
+  {
     hash: "a3f9c1",
     name: "Seagills Lanka — Food Delivery System",
     desc: "A centralized platform to manage all parcel delivery operations — customers place delivery requests and track items in real time, while delivery staff and admins coordinate tasks for faster, accurate service.",
