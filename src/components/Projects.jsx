@@ -2,6 +2,14 @@ import "./Projects.css";
 
 const PROJECTS = [
   {
+    hash: "e52b8d",
+    name: "HealthQ — Hospital OPD Appointment & Queue Management",
+    desc: "A mobile app for government hospital OPDs that lets patients book appointments, check doctor availability, and track their queue position in real time, while OPD staff and doctors manage patients, schedules, and appointments from a dedicated dashboard.",
+    stack: ["Flutter", "Dart", "Firebase", "Firestore", "Git", "GitHub"],
+    github: "https://github.com/YeshiniWckramasinghe/HealthQ",
+    demo: "#",
+  },
+  {
     hash: "c91a4f",
     name: "StudyFlow — Student Study Planner",
     desc: "A full-stack app for managing academic subjects, assignments, and deadlines, with a real-time progress dashboard, a RESTful API on MongoDB, priority-based task management, and dark/light theming.",
